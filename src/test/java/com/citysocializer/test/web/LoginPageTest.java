@@ -3,6 +3,7 @@ package com.citysocializer.test.web;
 
 import com.citysocializer.test.web.uicomponent.LoginPage;
 //import com.citysocializer.test.web.uicomponent.MainPage;
+import com.citysocializer.test.web.uicomponent.MainPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,7 +20,7 @@ import static org.junit.Assert.assertEquals;
 public class LoginPageTest {
 
     WebDriver driver;
-   // MainPage Mainpage;
+    MainPage MainPage;
     LoginPage LoginPage;
 
     @Before
@@ -42,23 +43,23 @@ public class LoginPageTest {
     public void testLogin() throws InterruptedException {
 
 
-//        //Test the right page
-//        driver.get("https://staging.citysocializer.com");
-//        Mainpage = PageFactory.initElements(driver, MainPage.class);
-//        Mainpage.clickLoginButton();
-//        Thread.sleep(3000);
-//        String url = driver.getCurrentUrl();
-//        assertEquals("https://staging.citysocializer.com/login", url );
-//
-//
-//        //Test LoginPage
-//        LoginPage = PageFactory.initElements(driver, LoginPage.class);
-//        LoginPage.enterEmail("agranada69@hotmail.com");
-//        LoginPage.enterPassword("123456");
-//        LoginPage.clickButtonLoginMe();
-//        Thread.sleep(5000);
-//        LoginPage.clickUserMenu();
-//        LoginPage.clickLogout();
+        //Test the right page
+        driver.get("https://staging.citysocializer.com");
+        MainPage = PageFactory.initElements(driver, MainPage.class);
+        MainPage.clickLoginButton();
+        Thread.sleep(3000);
+        String url = driver.getCurrentUrl();
+        assertEquals("https://staging.citysocializer.com/login", url );
+
+
+        //Test LoginPage
+        LoginPage = PageFactory.initElements(driver, LoginPage.class);
+        LoginPage.enterEmail("agranada69@hotmail.com");
+        LoginPage.enterPassword("123456");
+        LoginPage.clickButtonLoginMe();
+        Thread.sleep(5000);
+        LoginPage.clickUserMenu();
+        LoginPage.clickLogout();
 
 
 
